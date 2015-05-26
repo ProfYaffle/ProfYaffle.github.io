@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://tvheadend.org/install_tuner_hardware/">
+        <link rel="shortcut icon" href="../../images/favicon.png">
+        
+
+	<title>Install your tuner hardware - Tvheadend 4.0</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../custom.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">Tvheadend 4.0</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../overview/">Overview</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Before_you_begin/">Before you begin - some basic concepts</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Install your tuner hardware</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../install_tvheadend/">Install Tvheadend</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../configure_tvheadend/">Configure Tvheadend</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Interface Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../webui/epg/">Electronic Program Guide Tab</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Digital Video Recorder Tab</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../webui/dvr_upcoming/">Upcoming/Current Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/dvr_finished/">Finished Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/dvr_failed/">Failed Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/dvr_autorec/">DVR AutoRec Entries</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/dvr_timerec/">Time Schedules</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Configuration Tab</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../webui/config_misc/">General</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/config_access/">Access Entries</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">DVB Inputs</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../webui/config_tvadapters/">TV Adapters</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/config_networks/">Networks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/config_muxes/">Muxes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/config_services/">Services</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/config_muxsched/">Mux Schedulers</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Channel/EPG</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../webui/config_channels/">Channel</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/config_tags/">Channel Tags</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/config_bouquet/">Bouquets</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/config_epggrab/">EPG Grabber</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Stream</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../webui/config_streamprofile/">Stream Profiles</a>
+</li>
+
+        
+            
+<li >
+    <a href="../webui/config_esfilter/">Video Stream Filters</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../webui/about/">About Tab</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Appendices <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../Appendices/faqs/">Appendix 1 - Frequently-asked Questions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Appendices/command_line_options/">Appendix 2 - Command-line Options</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Appendices/debugging/">Appendix 3 - Debugging Options</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../about_project/">About</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../scratch/">Scratchpad</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../Before_you_begin/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../install_tvheadend/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/ProfYaffle/tvheadend-documentation">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#install-the-tuner-hardware">Install The Tuner Hardware</a></li>
+        
+            <li><a href="#1-install-the-tuner-hardware">1. Install the tuner hardware</a></li>
+        
+            <li><a href="#2-install-the-tuner-firmware-andor-drivers">2. Install the tuner firmware and/or drivers</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="install-the-tuner-hardware">Install The Tuner Hardware</h2>
+<p>This section will give you some basic ideas on how to get your tuner working with your operating system. However,
+it&rsquo;s clearly way beyond the scope of this guide to tell you everything: consult specialist forums, search around, 
+and at least do some research to work out what&rsquo;s likely to work or not before you hand over any money.</p>
+<h4 id="1-install-the-tuner-hardware">1. Install the tuner hardware</h4>
+<p>This is obviously a core requirement that&rsquo;s outside of the scope of this guide</p>
+<p>You basically have the choice of:</p>
+<ul>
+<li>
+<p>External USB tuners that plug in</p>
+</li>
+<li>
+<p>Internal (e.g. PCI) tuners that go inside the computer chassis</p>
+</li>
+<li>
+<p>External SAT&gt;IP tuners that send their decoded signals over a LAN connection. </p>
+</li>
+</ul>
+<p>Follow the appropriate installation instructions and, if relevant, the setup instruction (e.g. for SAT&gt;IP, which are effectively small, standalone computers).</p>
+<h4 id="2-install-the-tuner-firmware-andor-drivers">2. Install the tuner firmware and/or drivers</h4>
+<p>Similar to the above, tvheadend can do nothing if your tuners aren&rsquo;t working properly. A good place to check how to set up your tuners is the linuxtv wiki - this will not only tell you what&rsquo;s supported under Linux, but also how to get it all working:</p>
+<p><a href="http://www.linuxtv.org/wiki/index.php/Hardware_Device_Information">LinuxTV wiki device library</a></p>
+<p>Many tuners require firmware - normally, a binary file that&rsquo;s been extracted from the proprietary drivers used by Windows. Many Linux distros include a package for the most common devices (e.g. linux-firmwares under Ubuntu or firmware-linux-nonfree under Debian). If this isn&rsquo;t sufficient, a good source of firmware files is the OpenElec git repository:</p>
+<p><a href="https://github.com/OpenELEC/dvb-firmware">OpenElec firmware library</a></p>
+<p>Typically, you would download the binary file and install it into <code>/lib/firmware</code>, owned by <code>root:root</code>, permissions <code>rw-r--r--</code> (0644)</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>(c) 2006 - 2015 Tvheadend Foundation CIC</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

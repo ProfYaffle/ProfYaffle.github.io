@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://tvheadend.org/webui/config_tvadapters/">
+        <link rel="shortcut icon" href="../../../../images/favicon.png">
+        
+
+	<title>TV Adapters - Tvheadend 4.0</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../custom.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Tvheadend 4.0</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../overview/">Overview</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Before_you_begin/">Before you begin - some basic concepts</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install_tuner_hardware/">Install your tuner hardware</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install_tvheadend/">Install Tvheadend</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../configure_tvheadend/">Configure Tvheadend</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Interface Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../epg/">Electronic Program Guide Tab</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Digital Video Recorder Tab</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../dvr_upcoming/">Upcoming/Current Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_finished/">Finished Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_failed/">Failed Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_autorec/">DVR AutoRec Entries</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_timerec/">Time Schedules</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Configuration Tab</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../config_misc/">General</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_access/">Access Entries</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">DVB Inputs</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">TV Adapters</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_networks/">Networks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_muxes/">Muxes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_services/">Services</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_muxsched/">Mux Schedulers</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Channel/EPG</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../config_channels/">Channel</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_tags/">Channel Tags</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_bouquet/">Bouquets</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_epggrab/">EPG Grabber</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Stream</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../config_streamprofile/">Stream Profiles</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_esfilter/">Video Stream Filters</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../about/">About Tab</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Appendices <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../Appendices/faqs/">Appendix 1 - Frequently-asked Questions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Appendices/command_line_options/">Appendix 2 - Command-line Options</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Appendices/debugging/">Appendix 3 - Debugging Options</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../about_project/">About</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../scratch/">Scratchpad</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../config_access/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../config_networks/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/ProfYaffle/tvheadend-documentation">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#configuration-dvb-inputs-tv-adapters">Configuration - DVB Inputs - TV Adapters</a></li>
+        
+            <li><a href="#basic-settings">Basic Settings</a></li>
+        
+            <li><a href="#advanced-settings">Advanced Settings</a></li>
+        
+            <li><a href="#linuxdvb-specific-rows">LinuxDVB Specific Rows</a></li>
+        
+            <li><a href="#linuxdvb-satellite-config-rows">LinuxDVB Satellite Config Rows</a></li>
+        
+            <li><a href="#sat62ip-specific-rows">SAT>IP Specific Rows</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="configuration-dvb-inputs-tv-adapters">Configuration - DVB Inputs - TV Adapters</h2>
+<p>The adapters and tuners are listed and edited in a tree.</p>
+<p>To edit an item, click on it. To commit edited changes back to
+Tvheadend press the ‘Save’ button. In order to change a Checkbox
+cell you only have to click once in it.</p>
+<p><img alt="'TV Adapters' Tab Screenshot" src="../docresources/configtvadapters.png" /></p>
+<hr />
+<h4 id="basic-settings">Basic Settings</h4>
+<p><strong>Enabled</strong>
+:   If selected, this tuner/adapter will be enabled and will become
+    available to receive broadcasts or programmes.</p>
+<p><strong>Name</strong>:
+:   The name of this tuner.</p>
+<p><strong>Over-the-Air EPG</strong>
+:   Enable over-the-air programme guide (EPG) scanning on this input
+    device.</p>
+<p><strong>Networks</strong>
+:   Associate this device with one or more networks.</p>
+<hr />
+<h4 id="advanced-settings">Advanced Settings</h4>
+<p><strong>Priority</strong>
+:   The tuner priority value (higher value = higher priority to use this
+    tuner).</p>
+<p><strong>Streaming Priority</strong>
+:   The tuner priority value for streamed channels through HTTP or HTSP
+    (higher value = higher priority to use this tuner). If not set
+    (zero), the standard priority value is used.</p>
+<p><strong>Init Scan</strong>
+:   Allow the initial scan tuning on this device (scan when Tvheadend
+    starts). See to Skip initial Scan in the network settings for the
+    further description.</p>
+<p><strong>Idle Scan</strong>
+:   Allow the idle scan tuning on this device.</p>
+<p><strong>Linked Input</strong>
+:   Always make alive also the linked input. The subscriptions are named
+    as “keep”.</p>
+<hr />
+<h4 id="linuxdvb-specific-rows">LinuxDVB Specific Rows</h4>
+<p><strong>Power Save</strong>
+:   If enabled, allows the tuner to go to sleep when idle.</p>
+<p><strong>Tune Before DiseqC</strong>
+:   If set, one tune request (setup) is proceed before the DiseqC
+    sequence (voltage, tone settings). Some linux drivers require this
+    procedure.</p>
+<p><strong>Tune Repeats</strong>
+:   If set, the tune requests are repeated using this number. Zero means
+    one tune requests, one two tune requests etc.</p>
+<p><strong>Skip Initial Bytes</strong>
+:   If set, first bytes from the MPEG-TS stream are discarded. It may be
+    required for some drivers / hardware which does not flush completely
+    the MPEG-TS buffers after a frequency/parameters change.</p>
+<p><strong>Input Buffer (Bytes)</strong>
+:   By default, linuxdvb input buffer is 18800 bytes long. The accepted
+    range is 18800-1880000 bytes.</p>
+<p><strong>Status Period</strong>
+:   By default, linuxdvb status read period is 1000ms (one second). The
+    accepted range is 250ms to 8000ms. Note that for some hardware /
+    drivers (like USB), the status operations takes too much time and
+    CPU. In this case, increase the default value. For fast hardware,
+    this value might be descreased to make the decision of the re-tune
+    algorithm based on the signal status faster.</p>
+<p><strong>Force old status</strong>
+:   Always use the old ioctls to read the linuxdvb status (signal
+    strenght, SNR, error counters). Some drivers are not matured enough
+    to provide the correct values using the new v5 linuxdvb API.</p>
+<hr />
+<h4 id="linuxdvb-satellite-config-rows">LinuxDVB Satellite Config Rows</h4>
+<p><strong>DiseqC repeats</strong>
+:   Number of repeats for the DiseqC commands (default is zero - no
+    DiseqC repeats).</p>
+<p><strong>Full DiseqC</strong>
+:   Always sent the whole DiseqC sequence including LNB setup (voltage,
+    tone). If this is not checked, only changed settings is set. It may
+    cause issues with some drivers. If the tuning is not reliable, try
+    to activate this option.</p>
+<p><strong>Turn off LNB when idle</strong>
+:   Turn off LNB when it is not used. It may save some power.</p>
+<p><strong>Switch Then Rotor</strong>
+:   If the DiseqC switch is before rotor (tuner - switch - rotor),
+    enable this.</p>
+<p><strong>Init Rotor Time (seconds)</strong>
+:   Upon new start, tvheadend does not know the last rotor position.
+    This value defined the initial rotor movement. TVHeadend waits the
+    specified seconds when the first movement is requested.</p>
+<p><strong>Min Rotor Time (seconds)</strong>
+:   The minimum delay after the rotor movement command is send.</p>
+<hr />
+<h4 id="sat62ip-specific-rows">SAT>IP Specific Rows</h4>
+<p><strong>Full Mux Rx mode supported</strong>
+:   Enable if the SAT>IP box supports the full mux rx mode (pids=all)\
+     note: no comma after ‘Enable’</p>
+<p><strong>Signal scale (240 or 100)</strong>
+:   Some SAT>IP boxes only report a 0-100 (percentage) signal strength.
+    If your signal strength reports as too low, try setting this to 100.</p>
+<p><strong>Maximum PIDs</strong>
+:   Maximum supported PIDs in the filter of the SAT>IP box.</p>
+<p><strong>Maximum length of PIDs</strong>
+:   Maximum length in characters for the command setting PIDs to the
+    SAT>IP box.</p>
+<p><strong>Addpids/delpids supported</strong>
+:   Enable if the SAT>IP box supports the addpids/delpids command.</p>
+<p><strong>PIDs in setup</strong>
+:   Enable, if the SAT>IP box requires pids=0 parameter in the SETUP
+    RTSP command.</p>
+<p><strong>Double RTSP Shutdown</strong>
+:   Enable, if the SAT>IP box might require to send twice the RTSP
+    SHUTDOWN command.</p>
+<p><strong>Force pilot for DVB-S2</strong>
+:   Enable, if the SAT>IP box requiest plts=on parameter in the SETUP
+    RTSP command for DVB-S2 muxes.</p>
+<p><strong>UDP RTP Port Number (2 ports)</strong>
+:   Force the local UDP Port number here. The number should be even (RTP
+    port). The next odd number (+1) will be used as the RTCP port.</p>
+<p><strong>Satellite Positions</strong>
+:   Select the number of satellite positions supported by the SAT>IP
+    hardware and your coaxial cable wiring.</p>
+<p><strong>Master Tuner</strong>
+:   Select the master tuner.</p>
+<p>The signal from the standard universal LNB can be split using a
+    simple coaxial splitter (no multiswitch) to several outputs. In this
+    case, the position, the polarization and low-high band settings must
+    be equal. </p>
+<p>If you set other tuner as master, then this tuner will act like a
+    slave one and tvheadend will assure that this tuner will not use
+    incompatible parameters (position, polarization, lo-hi).</p>
+<p><strong>Next tune delay in ms (0-2000)</strong>
+:   The delay before tuning in milliseconds after tuner stop. If the
+    time after previous start and next start is greater than this
+    value - the delay is not applied.</p>
+<p><strong>Send full PLAY cmd</strong>
+:   Send the full RTSP PLAY command after full RTSP SETUP command. Some
+    device firmwares require this to get MPEG-TS stream.</p>
+<p><strong>Override tuner count</strong>
+:   Force tvheadend to see a specific number of tuners.</p>
+<p>Some devices, notably AVM’s FRITZ!Box Cable 6490, report wrong number of tuners
+    and this setting allows you to override that. Any value below 1 or
+    above 32 is ignored. For now this setting requires a restart of
+    tvheadend.</p>
+<p><strong>PIDs 21 in setup</strong>
+:   Enable, if the SAT>IP box requires pids=21 parameter in the SETUP
+    RTSP command.</p>
+<p><strong>Force teardown delay</strong>
+:   Force the delay between RTSP TEARDOWN and RTSP SETUP command (value
+    from ‘Next tune delay in ms’ is used). Some devices are not able to
+    handle quick continuous tuning.</p>
+<p><strong>Tuner bind IP address</strong>
+:   Force all network connections to this tuner to be made over the
+    specified IP-address, similar to the setting for the SAT-IP - device
+    itself. Setting this overrides the device - specific setting.</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>(c) 2006 - 2015 Tvheadend Foundation CIC</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

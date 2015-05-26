@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://tvheadend.org/webui/config_networks/">
+        <link rel="shortcut icon" href="../../../../images/favicon.png">
+        
+
+	<title>Networks - Tvheadend 4.0</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../custom.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Tvheadend 4.0</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../overview/">Overview</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Before_you_begin/">Before you begin - some basic concepts</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install_tuner_hardware/">Install your tuner hardware</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install_tvheadend/">Install Tvheadend</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../configure_tvheadend/">Configure Tvheadend</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Interface Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../epg/">Electronic Program Guide Tab</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Digital Video Recorder Tab</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../dvr_upcoming/">Upcoming/Current Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_finished/">Finished Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_failed/">Failed Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_autorec/">DVR AutoRec Entries</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_timerec/">Time Schedules</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Configuration Tab</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../config_misc/">General</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_access/">Access Entries</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">DVB Inputs</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../config_tvadapters/">TV Adapters</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Networks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_muxes/">Muxes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_services/">Services</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_muxsched/">Mux Schedulers</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Channel/EPG</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../config_channels/">Channel</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_tags/">Channel Tags</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_bouquet/">Bouquets</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_epggrab/">EPG Grabber</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Stream</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../config_streamprofile/">Stream Profiles</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_esfilter/">Video Stream Filters</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../about/">About Tab</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Appendices <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../Appendices/faqs/">Appendix 1 - Frequently-asked Questions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Appendices/command_line_options/">Appendix 2 - Command-line Options</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Appendices/debugging/">Appendix 3 - Debugging Options</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../about_project/">About</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../scratch/">Scratchpad</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../config_tvadapters/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../config_muxes/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/ProfYaffle/tvheadend-documentation">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#configuration-dvb-inputs-networks">Configuration - DVB Inputs - Networks</a></li>
+        
+            <li><a href="#buttons">Buttons</a></li>
+        
+            <li><a href="#columns">Columns</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="configuration-dvb-inputs-networks">Configuration - DVB Inputs - Networks</h2>
+<p>A network is the type of carrier for your television signals. Tvheadend
+supports several different types of network, notably:</p>
+<p><strong>DVB-C</strong> : Cable TV, delivered via a cable to your house</p>
+<p><strong>DVB-S</strong> : Satellite (includes S2), so any signal coming in via a dish</p>
+<p><strong>DVB-T</strong> : Terrestrial, so over-the-air broadcasts received through a
+traditional television aerial</p>
+<p><strong>ATSC</strong> : Over-the-air terrestrial, common in north and central America
+and parts of south Asia</p>
+<p><strong>IPTV</strong> : IP, so over the Internet</p>
+<p><img alt="'Networks' Tab Screenshot" src="../docresources/configdvbnetwork.png" /></p>
+<hr />
+<h4 id="buttons">Buttons</h4>
+<p>The buttons have the following functions:</p>
+<p><strong>Add</strong>:
+Add a new network. You can choose from any of the types described above.</p>
+<p><strong>Delete</strong>:
+Delete an existing network. This will also remove any association with
+an adapter.</p>
+<p><strong>Edit</strong>:
+Edit an existing network. This allows you to change any of the
+parameters you’d otherwise set when adding a new network, e.g. network
+discovery, idle scan, etc. - similar to using the check boxes to
+enable/disable functions.</p>
+<p><strong>Save</strong>:
+Saves any changes.</p>
+<p><strong>Undo</strong>:
+Undoes any changes.</p>
+<hr />
+<h4 id="columns">Columns</h4>
+<p>The columns have the following functions:</p>
+<p><strong>Network Name</strong>:
+The name of the network. This can be set automatically or you can give
+it a name that means something to you (e.g. if you have multiple OTA
+networks).</p>
+<p><strong>Network Discovery</strong>:
+Whether automatic discovery is enabled for this network, i.e. whether
+Tvheadend looks for muxes or simply stays with the list of muxes as
+defined initially.</p>
+<p><strong>Skip initial Scan</strong>:
+Don’t scan all muxes in this network at Tvheadend start. The initial
+scan procedure is not a blind scan. Only known muxes registered to this
+network are scanned. If Network Discovery is enabled and new muxes are
+discovered using DVB descriptors, these muxes will be scanned too.</p>
+<p><strong>Idle Scan Muxes</strong>:
+When nothing else happens Tvheadend will continuously rotate among all
+muxes and tune to them to verify that they are still working when the
+inputs are not used for streaming. If your adapter have problems with
+lots of (endless) tuning, try to disable this. Note that this option
+should be OFF for the normal operation. This type of mux probing is not
+required and it may cause issues for SAT>IP (limited number of PID
+filters).</p>
+<p><strong>Ignore Provider’s Channel Numbers</strong>:
+Some providers will try to set a channel number so that every receiver
+is consistent - “tune to Channel x on 150”. This option allows you to
+ignore this and let tvhheadend allocate a channel number itself.</p>
+<p><strong>Max Input Streams</strong>:
+IPTV : maximum simultaneous streams that can be played.</p>
+<p><strong>Max Bandwidth</strong>:
+IPTV : maximum bandwidth allowed for streams.</p>
+<p><strong>Max timeout</strong>:
+IPTV : maximum timeout trying to play stream.</p>
+<p><strong>Network ID</strong>:
+If you experience problems caused by overlaps between multiple network
+providers this option can be used to filter which network ID is received
+by a given adapter.</p>
+<p><strong>Ignore Provider’s Channel Numbers</strong>:
+Do not use the local channel numbers defined by provider.</p>
+<p><strong>SAT>IP Source Number</strong>:
+This field is matched through the “src” parameter asked from the SAT>IP
+client. Usually (and by default) this value is 1. For satellite tuners,
+this value determines the satellite source (dish). By specification
+position 1 = DiseqC AA, 2 = DiseqC AB, 3 = DiseqC BA, 4 = DiseqC BB, but
+any numbers may be used - depends on the SAT>IP client. Note that if
+you use same number for multiple networks, the first matched network
+containing the mux with requested parameters will win (also for unknown
+mux). If this field is set to zero, the network cannot be used by the
+SAT>IP server.</p>
+<p><strong>EIT Local Time</strong>:
+EPG (EIT) events uses local time instead UTC.</p>
+<p><strong>Character Set</strong>:
+The character encoding for this network (e.g. UTF-8).</p>
+<p><strong>Priority</strong>:
+IPTV : The network priority value (higher value = higher priority to use
+muxes/services from this network).</p>
+<p><strong>Streaming Priority</strong>:
+IPTV : The network priority value for streamed channels through HTTP or
+HTSP (higher value = higher priority to use muxes/services from this
+network). If not set, the standard network priority value is used.</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>(c) 2006 - 2015 Tvheadend Foundation CIC</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

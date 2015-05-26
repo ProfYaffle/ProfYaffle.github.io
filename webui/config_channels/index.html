@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://tvheadend.org/webui/config_channels/">
+        <link rel="shortcut icon" href="../../../../images/favicon.png">
+        
+
+	<title>Channel - Tvheadend 4.0</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../custom.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Tvheadend 4.0</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../overview/">Overview</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Before_you_begin/">Before you begin - some basic concepts</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install_tuner_hardware/">Install your tuner hardware</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install_tvheadend/">Install Tvheadend</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../configure_tvheadend/">Configure Tvheadend</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Interface Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../epg/">Electronic Program Guide Tab</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Digital Video Recorder Tab</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../dvr_upcoming/">Upcoming/Current Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_finished/">Finished Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_failed/">Failed Recordings</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_autorec/">DVR AutoRec Entries</a>
+</li>
+
+        
+            
+<li >
+    <a href="../dvr_timerec/">Time Schedules</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Configuration Tab</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../config_misc/">General</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_access/">Access Entries</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">DVB Inputs</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../config_tvadapters/">TV Adapters</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_networks/">Networks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_muxes/">Muxes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_services/">Services</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_muxsched/">Mux Schedulers</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Channel/EPG</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">Channel</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_tags/">Channel Tags</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_bouquet/">Bouquets</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_epggrab/">EPG Grabber</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Stream</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../config_streamprofile/">Stream Profiles</a>
+</li>
+
+        
+            
+<li >
+    <a href="../config_esfilter/">Video Stream Filters</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../about/">About Tab</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Appendices <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../Appendices/faqs/">Appendix 1 - Frequently-asked Questions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Appendices/command_line_options/">Appendix 2 - Command-line Options</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Appendices/debugging/">Appendix 3 - Debugging Options</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../about_project/">About</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../scratch/">Scratchpad</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../config_muxsched/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../config_tags/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/ProfYaffle/tvheadend-documentation">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#configuration-channels">Configuration - Channels</a></li>
+        
+            <li><a href="#menu-bar">Menu Bar</a></li>
+        
+            <li><a href="#columns">Columns</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="configuration-channels">Configuration - Channels</h2>
+<p>Display and edit channel configuration here.</p>
+<p>The channels are listed / edited in a grid.</p>
+<ul>
+<li>
+<p>To edit a cell, double-click on it. After a cell is changed it will
+  flags one of its corner to red to indicated that it has been
+  changed. To commit these changes back to Tvheadend press the ‘Save
+  changes’ button. In order to change a Checkbox cell you only have to
+  click once in it.</p>
+</li>
+<li>
+<p>To delete one or more entries, select the lines (by clicking once on
+  them), and press the ‘Delete selected’ button. A popup will ask you
+  to confirm your request.</p>
+</li>
+</ul>
+<p><img alt="'Channels' Tab" src="../docresources/channeltab.png" /></p>
+<hr />
+<h4 id="menu-bar">Menu Bar</h4>
+<p>The menu bar items have the following functions:</p>
+<p><strong>Save</strong></p>
+<p><strong>Undo</strong></p>
+<p><strong>Add</strong></p>
+<p><strong>Delete</strong></p>
+<p><strong>Edit</strong></p>
+<p><strong>Map Services</strong></p>
+<p><strong>Assign Number</strong></p>
+<p><strong>Number Up</strong></p>
+<p><strong>Number Down</strong></p>
+<p><strong>Swap Number</strong></p>
+<p><strong>Reset Icon</strong></p>
+<hr />
+<h4 id="columns">Columns</h4>
+<p>The columns have the following functions:</p>
+<p><strong>Play</strong>
+:   Direct play link using the HTTP streaming.</p>
+<p>URL to the stream using a channel name:
+    <code>http://*host:port*/play/stream/channelname/*channel\_name*</code></p>
+<p>URL to the stream using a channel number:
+    <code>http://*host:port*/play/stream/channelnumber/*channel\_number*</code></p>
+<p><strong>Enabled</strong>
+:   Whether or not the mux is enabled and thus available.
+    Channel number. This is not used by Tvheadend internally, but rather
+    intended to be used by HTSP clients for mapping to remote control
+    buttons, presentation order, etc</p>
+<p><strong>Number</strong>
+:   Channel number. This is not used by Tvheadend internally, but rather
+    intended to be used by HTSP clients for mapping to remote control
+    buttons, presentation order, etc</p>
+<p><strong>Name</strong>
+:   Name of the channel as presented in EPG and external interfaces.
+    Changing name of a channel does not interfere with scheduled recordings,
+    etc.</p>
+<p><strong>Play</strong>
+:   Play the channel using the VLC plugin (if available) else it will
+    display a direct link that can be used to open in preferred media
+    player.</p>
+<p><strong>Auto EPG Channel</strong>
+:   Auto-link EPG channels from XMLTV and OpenTV EPG grabbers using the
+    channel name for matching. If you turn this option off, only OTA EPG
+    grabber will be used for this channel unless the EPG Grab Source option
+    (below) is not set manually.</p>
+<p><strong>EPG Grab Source</strong>
+:   Name of the Internet-based EPG provider (typically XMLTV) channel that
+    should be used to update this channels EPG info. By default Tvheadend
+    tries to match the name itself, but sometimes it might not match
+    correctly in which case you can do the mapping manually. When using
+    XMLTV, a newly-mapped channel will not appear in the EPG until the next
+    run of the grabber, or service restart.</p>
+<p>Over the air (OTA) sources do NOT need to be mapped in this way, the
+  linking is implicitly tied since they are all part of the DVB system.</p>
+<p><strong>Tags</strong>
+:   Each channel can be bound to a zero, one or many tags. The tags are used
+    for multiple things and it’s up to you how you wish to use and name
+    them. Tags can be used to aid searching in the EPG if you have many
+    channels. The tags are also presented in a Media player.</p>
+<p><strong>User Icon</strong>
+:   A URL pointing to an image representing the channel. The icon URL will
+    be set automatically when importing data from XMLTV, when picon path is
+    set or when channel icon path is set in the general config. This field
+    allows the user to edit it manually. The reset icon action allows to
+    re-set the automatic URL for selected channel (e.g. after configuration
+    change).</p>
+<p><strong>DVR Pre-Start</strong>
+:   Allows the user to specify an amount of extra time that should be
+    prepended to a recording scheduled on this channel. In other words, if
+    you type 5 here for a recording that is scheduled for 20:00 will start
+    to record at 19:55. This setting overrides the Extra time before
+    recordings DVR setting.</p>
+<p><strong>DVR Post-End</strong>
+:   Similar to DVR Pre-Start this allows the user to add an extra amount of
+    time that should be appended to a recording. In other words, if you type
+    5 here for a recording that is scheduled to end 20:30 will stop to
+    record at 20:35. This setting overrides the Extra time after recordings
+    DVR setting.</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>(c) 2006 - 2015 Tvheadend Foundation CIC</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
