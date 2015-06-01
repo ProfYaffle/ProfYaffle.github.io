@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Tvheadend 4.0 User Guide\n\n\n\n\nVersion: DRAFT-2015-05-26\n\n\nPurpose\n\n\nThis document is intended to give you a high-level overview of how to set \nup Tvheadend for the first time. It does not aim to provide a complete description\nof every step; instead, consult the on-line (web interface) help as you \nset things up, as there is much more information in those pages that will\nhelp you with specific configuration issues.\n\n\nThink of this as the map on how to get there, not the instruction manual about how to drive.\n\n\n\n\nNote\n\n\nIf we can include the web help in this document as well, then the above\nobviously falls into the category of 'not really true any more'.", 
+            "text": "Tvheadend 4.0 User Guide\n\n\n\n\nVersion: DRAFT-2015-06-01\n\n\nPurpose\n\n\nThis document is intended to give you a high-level overview of how to set \nup Tvheadend for the first time. It does not aim to provide a complete description\nof every step; instead, consult the on-line (web interface) help as you \nset things up, as there is much more information in those pages that will\nhelp you with specific configuration issues.\n\n\nThink of this as the map on how to get there, not the instruction manual about how to drive.\n\n\n\n\nNote\n\n\nIf we can include the web help in this document as well, then the above\nobviously falls into the category of 'not really true any more'.", 
             "title": "Home"
         }, 
         {
             "location": "/#tvheadend-40-user-guide", 
-            "text": "Version: DRAFT-2015-05-26", 
+            "text": "Version: DRAFT-2015-06-01", 
             "title": "Tvheadend 4.0 User Guide"
         }, 
         {
