@@ -53,6 +53,13 @@
 <li>
           
             <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../scratch/">Scratchpad</a>
+        
+    </li>
+<li>
+          
+            <li>
     <ul class="subnav">
     <li><span>Getting Started</span></li>
 
@@ -265,6 +272,10 @@
                 
                     <li><a class="toctree-l4" href="#columns">Columns</a></li>
                 
+                    <li><a class="toctree-l4" href="#stream-profile-types">Stream Profile Types</a></li>
+                
+                    <li><a class="toctree-l4" href="#transcoding-settings">Transcoding Settings</a></li>
+                
             
             </ul>
         
@@ -301,6 +312,20 @@
 
         
     </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../config_caclient/">CAs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../config_tvhlog/">Debugging</a>
+        
+    </li>
 
         
     </ul>
@@ -348,13 +373,6 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../../about_project/">About</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../../scratch/">Scratchpad</a>
         
     </li>
 <li>
@@ -414,8 +432,89 @@
 <hr />
 <h4 id="columns">Columns</h4>
 <p>The columns have the following functions:</p>
-<p><strong>Stream Profile Name</strong>
-: This column contains the name of Stream Profile.</p>
+<h4 id="stream-profile-types">Stream Profile Types</h4>
+<p><strong>MPEG-TS Pass-through /build-in</strong>
+:   MPEG-TS pass through muxer (built-in)</p>
+<p><strong>Matroska (mkv) /build-in</strong>
+:   Matroska/WebM muxer (built-in)</p>
+<p><strong>HTSP Stream Profile</strong>
+:   HTSP Default Stream Settings</p>
+<p><strong>MPEG-TS /av-lib</strong>
+:   MPEG-TS stream muxer (libav)</p>
+<p><strong>Matroska /av-lib</strong>
+:   Matroska/WebM muxer (libav)</p>
+<p><strong>Transcode /av-lib</strong>
+:   Transcode video/audio/subtitles to different codecs and containers</p>
+<h4 id="transcoding-settings">Transcoding Settings</h4>
+<p><strong>Container</strong>
+:   Container to use for transcoded streams.</p>
+<p><strong>Resolution</strong>
+:   Vertical resolution (height) of the output video stream. Horizontal resolution
+    is adjusted automatically to preserve aspect ratio.</p>
+<p><strong>Channels</strong>
+:   Channel layout for audio streams.</p>
+<p><strong>Language</strong>
+:   Currently unused.</p>
+<p><strong>Video Codec</strong>
+:   Codec for video stream.</p>
+<ul>
+<li>
+<p><strong>Do not use</strong>
+:   Don&rsquo;t output a video stream.</p>
+</li>
+<li>
+<p><strong>Copy codec type</strong>
+: Pass through video stream without transcoding.</p>
+</li>
+</ul>
+<p><strong>Video Bitrate</strong>
+:   Video quality/bitrate of the transcoded video stream.</p>
+<ul>
+<li>
+<p><strong>0: Automatic Setting (target quality)</strong>
+:   The automatic setting is dependent on the used codec. The respective
+    values used, are 5 for MPEG2 and 15 for H.264 and VP8.</p>
+</li>
+<li>
+<p><strong>1-63: Target Quality</strong>
+:   Use the given value to achieve average quality. A lower value results
+    in better quality. The resulting bitrate is dependent on the complexity
+    of the video stream.</p>
+</li>
+<li>
+<p><strong>&gt;63: Target Bitrate</strong>
+:   Use the given value to achieve average bitrate. The resulting quality
+    is dependent on the complexity of the video stream.</p>
+</li>
+</ul>
+<p><strong>Audio Codec</strong>
+:    Codec for audio streams.</p>
+<ul>
+<li>
+<p><strong>Do not use</strong>
+:    Don&rsquo;t output an audio stream.</p>
+</li>
+<li>
+<p><strong>Copy codec type</strong>
+:    Pass through audio streams without transcoding.</p>
+</li>
+<li>
+<p><strong>Audio Bitrate</strong>
+:    Audio bitrate of the transcoded audio streams.</p>
+</li>
+</ul>
+<p><strong>Subtitles Codec</strong>
+:    Codec for subtitles.</p>
+<ul>
+<li>
+<p><strong>Do not use</strong>
+:    Don&rsquo;t output subtitles.</dd></p>
+</li>
+<li>
+<p><strong>Copy codec type</strong>
+:    Pass through subtitles without transcoding.</p>
+</li>
+</ul>
               
             </div>
           </div>

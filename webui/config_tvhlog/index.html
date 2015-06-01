@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Mux Schedulers - Tvheadend 4.0</title>
+  <title>Debugging - Tvheadend 4.0</title>
   
 
   <link rel="shortcut icon" href="../../images/favicon.png">
@@ -210,17 +210,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Mux Schedulers</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#configuration-dvb-inputs-mux-schedulers">Configuration - DVB Inputs - Mux Schedulers</a></li>
-                
-                    <li><a class="toctree-l4" href="#columns">Columns:</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../config_muxsched/">Mux Schedulers</a>
         
     </li>
 
@@ -316,8 +307,19 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../config_tvhlog/">Debugging</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Debugging</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#configuration-debugging">Configuration - Debugging</a></li>
+                
+                    <li><a class="toctree-l4" href="#menu-bar">Menu Bar</a></li>
+                
+                    <li><a class="toctree-l4" href="#configuration-options">Configuration options:</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -393,11 +395,11 @@
     
       
         
-          <li>DVB Inputs &raquo;</li>
+          <li>Configuration Tab &raquo;</li>
         
       
     
-    <li>Mux Schedulers</li>
+    <li>Debugging</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -411,24 +413,31 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="configuration-dvb-inputs-mux-schedulers">Configuration - DVB Inputs - Mux Schedulers</h2>
-<p>Mux Schedulers enable Tvheadend to automatically play channels. This is
-useful to get EPG, services or access rights updates.</p>
-<p><img alt="'Mux Schedulers' Tab" src="../docresources/configdvbmuxsched.png" /></p>
+                <h2 id="configuration-debugging">Configuration - Debugging</h2>
+<p><img alt="'Debugging' Tab" src="../docresources/configtvhlog.png" /></p>
+<p>This tab is used to configure various debugging options in tvheadend.</p>
 <hr />
-<h4 id="columns">Columns:</h4>
-<p>The columns have the following functions:</p>
-<p><strong>Enabled</strong>
-:   If selected, schedule will be triggered. If unselected, schedule will be
-    ignored.</p>
-<p><strong>Mux</strong>
-:   Select mux to be played from the available muxes.</p>
-<p><strong>Cron</strong>
-:   Schedule frequency, using cron syntax.</p>
-<p>Example : every day at 2am is <code>0 2 \* \* \*</code></p>
-<p><strong>Timeout</strong>
-:   Time in seconds the selected mux will be played.</p>
-<p>Example : 1 hour would be <code>3600</code></p>
+<h4 id="menu-bar">Menu Bar</h4>
+<p>Options&hellip;</p>
+<hr />
+<h4 id="configuration-options">Configuration options:</h4>
+<p><strong>Debug log path</strong>
+: text   </p>
+<p><strong>Debug to syslog</strong>
+: text   </p>
+<p><strong>Debug trace (low-level stuff)</strong>
+: text</p>
+<p><strong>Debug subsystems</strong>
+: text   </p>
+<p><strong>Trace subsystems</strong>
+: text   </p>
+<p>Changes to any of these settings must be confirmed by pressing the ‘Save
+configuration’ button before taking effect.</p>
+<p>Note that the settings is not saved to a storage. It is available only
+until the actual tvheadend process is running. If you like to change the
+default behaviour permanently, use the command line options like <code>-l</code>,
+<code>–debug</code>, <code>–trace</code>. This configuration is stored usually in the
+/etc/sysconfig tree (depending on the distribution) or an init script.</p>
               
             </div>
           </div>
@@ -436,10 +445,10 @@ useful to get EPG, services or access rights updates.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../config_channels/" class="btn btn-neutral float-right" title="Channel"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../about/" class="btn btn-neutral float-right" title="About Tab"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../config_services/" class="btn btn-neutral" title="Services"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../config_caclient/" class="btn btn-neutral" title="CAs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -468,10 +477,10 @@ useful to get EPG, services or access rights updates.</p>
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../config_services/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../config_caclient/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../config_channels/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

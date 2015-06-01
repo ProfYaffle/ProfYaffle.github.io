@@ -53,6 +53,13 @@
 <li>
           
             <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../scratch/">Scratchpad</a>
+        
+    </li>
+<li>
+          
+            <li>
     <ul class="subnav">
     <li><span>Getting Started</span></li>
 
@@ -297,6 +304,8 @@
                 
                     <li><a class="toctree-l4" href="#recording-file-options">Recording File Options</a></li>
                 
+                    <li><a class="toctree-l4" href="#full-pathname-specification">Full Pathname Specification</a></li>
+                
                     <li><a class="toctree-l4" href="#subdirectory-options">Subdirectory Options</a></li>
                 
                     <li><a class="toctree-l4" href="#filename-options">Filename Options</a></li>
@@ -315,6 +324,20 @@
 
         
     </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../config_caclient/">CAs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../config_tvhlog/">Debugging</a>
+        
+    </li>
 
         
     </ul>
@@ -366,13 +389,6 @@
     </li>
 <li>
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../../scratch/">Scratchpad</a>
-        
-    </li>
-<li>
-          
         </ul>
       </div>
       &nbsp;
@@ -414,14 +430,14 @@
             <div class="section">
               
                 <h2 id="configuration-recording-digital-video-recorder-profiles">Configuration - Recording - Digital Video Recorder Profiles</h2>
+<p>This tab is used to configure operation of the Digital Video Recorder.
+It is not used for scheduling or administration of individual
+recordings.</p>
 <p><img alt="'Digital Video Recorder Profiles' Tab 1" src="../docresources/configdvrtab1.png" /></p>
 <p><img alt="'Digital Video Recorder Profiles' Tab 2" src="../docresources/configdvrtab2.png" /></p>
 <p><img alt="'Digital Video Recorder Profiles' Tab 3" src="../docresources/configdvrtab3.png" /></p>
 <h2 id="editors-note-merge-above-images-into-one">EDITOR&rsquo;S NOTE: Merge above images into one</h2>
 <h2 id="editors-note-have-overview-screenshot-showing-profiles-then-focus-on-config">EDITOR&rsquo;S NOTE: Have overview screenshot showing profiles, then focus on config</h2>
-<p>This tab is used to configure operation of the Digital Video Recorder.
-It is not used for scheduling or administration of individual
-recordings.</p>
 <hr />
 <h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
 <p>Menu items are&hellip;</p>
@@ -440,26 +456,38 @@ recordings.</p>
  between the write request (from the application) and the actual
  write itself (to the disc/storage) as changes are buffered to be
  written in one go.</p>
+<ul>
+<li>
 <p><strong>Unknown</strong>
 :   A placeholder status, meaning that the configuration isn’t properly
     set.</p>
+</li>
+<li>
 <p><strong>System</strong>
 :   Change nothing and rely on standard (default) system caching to
     behave as it normally would.</p>
+</li>
+<li>
 <p><strong>Do not keep</strong>
 :   Tell the system that you’re not expecting to re-use the data soon,
     so don’t keep it in cache. The data will still be buffered for
     writing. <em>Useful e.g. in a RAM-limited system like a Pi (given that
     you’re unlikely to be watching while recording, so data can be
     discarded now and read back from disc later).</em></p>
+</li>
+<li>
 <p><strong>Sync</strong>
 :   Tell the system to write the data immediately. This doesn’t affect
     whether or not it’s cached. <em>Useful e.g. if you’ve a particular
     problem with data loss due to delayed write (such as if you get
     frequent transient power problems).</em></p>
+</li>
+<li>
 <p><strong>Sync + Do not keep</strong>
 :   A combination of last two variants above - data is written
     immediately and then discarded from cache.</p>
+</li>
+</ul>
 <p><strong>DVR Log retention time (days)</strong>
 :   Time that Tvheadend will keep information about the recording in its
     internal database. Notice that the actual recorded file will not be
@@ -508,6 +536,11 @@ recordings.</p>
 <td>BBC world</td>
 </tr>
 <tr>
+<td>%O</td>
+<td>Owner of this recording</td>
+<td>user</td>
+</tr>
+<tr>
 <td>%C</td>
 <td>Who created this recording</td>
 <td>user</td>
@@ -516,6 +549,16 @@ recordings.</p>
 <td>%t</td>
 <td>Program title</td>
 <td>News</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>Program subtitle</td>
+<td>Afternoon</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>Program episode</td>
+<td>S02.E07</td>
 </tr>
 <tr>
 <td>%d</td>
@@ -539,10 +582,12 @@ recordings.</p>
 </tr>
 </tbody>
 </table>
-<p>Example usage: <code>/path/to/ffmpeg -i %f -vcodec libx264 -acodec copy
-“/path/with white space/%b”</code></p>
-<p>You need to use quotes or escape white spaces if you want white spaces
-in an argument.</p>
+<div class="admonition note">
+<p class="admonition-title">Example usage</p>
+<p>To use special characters (e.g. spaces), either put the string in quotes or escape the individual characters.</p>
+<p><code>/path/to/ffmpeg -i "%f" -vcodec libx264 -acodec copy "/path/with white space/%b"</code></p>
+</div>
+
 <hr />
 <h4 id="recording-file-options">Recording File Options</h4>
 <p><strong>Recording system path</strong>
@@ -575,8 +620,8 @@ different user ID, e.g. to chop out commercials.</p>
 </tr>
 </tbody>
 </table>
-<p>Note that the applicable umask applies, so 0666 with umask 0022 will
-produce 0644 (rw-r–r–). See also <em>Directory permissions</em> in
+<p>Note that the applicable umask applies, so <em>0666</em> with umask <em>0022</em> will
+produce <em>0644</em> (<code>rw-r–r–</code>). See also <em>Directory permissions</em> in
 <em>Subdirectory Options</em>.</p>
 <p><strong>Filename charset</strong>
 :   Character set for the created filename. Tvheadend will try to
@@ -587,6 +632,73 @@ produce 0644 (rw-r–r–). See also <em>Directory permissions</em> in
 <p><strong>Skip commercials</strong>
 :   If checked, commercials will be dropped from the recordings. At the
     moment, commercial detection only works for the swedish channel TV4.</p>
+<hr />
+<h4 id="full-pathname-specification">Full Pathname Specification</h4>
+<p><strong>Format String</strong>
+:   The string allow to manually specify the full path generation using
+    the predefined modifiers for strftime (see <code>man strftime</code>, except
+    <code>%n</code> and <code>%t</code>) and Tvheadend specific. Note that you may modify some of
+    this format string setting using the GUI fields below.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$t$n.$x</td>
+<td>Default format (title, unique number, extension)</td>
+<td>Tennis - Wimbledon-1.mkv</td>
+</tr>
+<tr>
+<td>$s</td>
+<td>Event subtitle name</td>
+<td>Sport</td>
+</tr>
+<tr>
+<td>$t</td>
+<td>Event title name</td>
+<td>Tennis - Wimbledon</td>
+</tr>
+<tr>
+<td>$e</td>
+<td>Event episode name</td>
+<td>S02-E06</td>
+</tr>
+<tr>
+<td>$c</td>
+<td>Channel name</td>
+<td>SkySport</td>
+</tr>
+<tr>
+<td>$n</td>
+<td>Unique number added when the file already exists</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>$x</td>
+<td>Filename extension (from the active stream muxer</td>
+<td>mkv</td>
+</tr>
+<tr>
+<td>%F</td>
+<td>ISO 8601 date format</td>
+<td>2011-03-19</td>
+</tr>
+<tr>
+<td>%R</td>
+<td>The time in 24-hour notation</td>
+<td>14:12</td>
+</tr>
+</tbody>
+</table>
+<p>The format strings <code>$t</code>,<code>$s</code>,<code>%e</code>,<code>$c</code> also have delimiter variants such as 
+<code>$ t</code> (space after the dollar character), <code>$-t</code>, <code>$_t</code>,
+<code>$.t</code>, <code>$,t</code>, <code>$;t</code>. In these cases, the delimiter is applied 
+only when the substituted string is not empty.</p>
 <hr />
 <h4 id="subdirectory-options">Subdirectory Options</h4>
 <p><strong>Directory permissions</strong>
@@ -616,13 +728,13 @@ a different user ID, e.g. to chop out commercials.</p>
 </tr>
 </tbody>
 </table>
-<p>Note that the applicable umask applies, so 0777 with umask 0022 will
-produce 0755 (rwxr-xr-x). See also <em>File permissions</em> in <em>Recording File
+<p>Note that the applicable umask applies, so <em>0777</em> with umask <em>0022</em> will
+produce <em>0755</em> (<code>rwxr-xr-x</code>). See also <em>File permissions</em> in <em>Recording File
 Options</em>.</p>
 <p><strong>Make sub-directories per day</strong>
 :   If checked, create a new directory per day in the recording system path.
     Only days when anything is recorded will be created. The format of the
-    directory will be ‘YYYY-MM-DD’ (ISO standard)</p>
+    directory will be ISO standard <em>YYYY-MM-DD</em>.</p>
 <p><strong>Make sub-directories per channel</strong>
 :   If checked, create a directory per channel when storing events. If both
     this and the ‘directory per day’ checkbox is enabled, the date-directory
@@ -657,10 +769,10 @@ Options</em>.</p>
     options are set).</p>
 <p><strong>Remove all unsafe characters from filename</strong>
 :   If checked, all characters that could possibly cause problems for
-    filenaming will be replaced with ‘_’.</p>
+    filenaming will be replaced with underscore (<code>_</code>).</p>
 <p>Applies to characters:</p>
 <ul>
-<li>not supported by Windows: <strong>/ : \ &lt; &gt; | * ? ’ "</strong></li>
+<li>not supported by Windows: <code>/</code> <code>:</code> <code>\</code> <code>&lt;</code> <code>&gt;</code> <code>|</code> <code>*</code> <code>?</code> <code>"</code></li>
 <li>control characters (ASCII code below 32)</li>
 <li>control and national characters (ASCII code above 122)</li>
 </ul>
@@ -668,11 +780,13 @@ Options</em>.</p>
 :   If checked, whitespace characters (spaces and tabs) will be replaced
     with ‘-’.</p>
 <p><strong>Use Windows-compatible filenames</strong>
-:   If checked:</p>
+:   If checked, characters not supported in Windows filenames (e.g. for
+    an SMB/CIFS share) will be stripped out or converted.</p>
+<p>Applies to characters:</p>
 <ul>
-<li>special characters not supported by Windows like: <strong>/ : \ \&lt; > | *
-? ’ &ldquo;</strong> will be replaced with ‘_’</li>
-<li>trailing spaces ‘ ’ and dots ‘.’ will be removed</li>
+<li>those not supported by Windows (<code>/</code> <code>:</code> <code>\</code> <code>&lt;</code> <code>&gt;</code> <code>|</code> <code>*</code>
+<code>?</code> <code>"</code>) will be replaced with underscore (<code>_</code>)</li>
+<li>trailing spaces and dots will be removed</li>
 </ul>
 <p>Changes to any of these settings must be confirmed by pressing the ‘Save
 configuration’ button before taking effect.</p>
