@@ -148,7 +148,7 @@
             
                 <li class="toctree-l3"><a href="#digital-video-recorder-autorec">Digital Video Recorder - Autorec</a></li>
                 
-                    <li><a class="toctree-l4" href="#buttons">Buttons</a></li>
+                    <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
                     <li><a class="toctree-l4" href="#columns">Columns</a></li>
                 
@@ -421,21 +421,38 @@ Time Schedules tab.</p>
 <p>This tab controls EPG-driven recording rules.</p>
 <p><img alt="'Autorec' Tab" src="../docresources/dvrautorecentries.png" /></p>
 <hr />
-<h4 id="buttons">Buttons</h4>
-<p>The buttons have the following functions:</p>
-<p><strong>Add</strong>
-: Add and configure a recording rule - define the channel, schedule, DVR
-configuration, priority, etc.</p>
-<p><strong>Delete</strong>
-: Delete an existing recording rule.</p>
-<p><strong>Edit</strong>
-: Manually edit an existing recording rule. This uses the same fields as
-<strong>Add</strong>, but they’re pre-populated with their current values.</p>
-<p><strong>Save</strong>
-: Saves any changes made to the recording rule list.</p>
-<p><strong>Undo</strong>
-: Undoes any changes made to the recording rules list (any changed fields
-will be marked with a small red triangle).</p>
+<h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
+<p>The following functions are available:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Add</strong></td>
+<td>Add and configure a recording rule - define the channel, schedule, DVR configuration, priority, etc.</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>Delete an existing recording rule.</td>
+</tr>
+<tr>
+<td><strong>Edit</strong></td>
+<td>Manually edit an existing recording rule. This uses the same fields as <strong>Add</strong>, but they’re pre-populated with their current values.</td>
+</tr>
+<tr>
+<td><strong>Save</strong></td>
+<td>Saves any changes made to the recording rule list.</td>
+</tr>
+<tr>
+<td><strong>Undo</strong></td>
+<td>Undoes any changes made to the recording rules list (any changed fields will be marked with a small red triangle).</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h4 id="columns">Columns</h4>
 <p>The columns have the following functions:</p>
@@ -447,12 +464,14 @@ Clarkson’.</p>
 <p><strong>Directory</strong>
 : When specified, this setting overrides the subdirectory rules (except
 the base directory) specified by the DVR configuration and puts all
-recordings done by this entry into the specified subdirectory. Useful
-for e.g. recording multiple different news broadcasts into one common
+recordings done by this entry into the specified subdirectory. </p>
+<blockquote>
+<p>Useful for e.g. recording multiple different news broadcasts into one common
 subdirectory called “News”. The backshlash and other special characters
 are escaped, so it is possible to create only one sublevel
 subdirectories (the base path for the target directory is always taken
 from the DVR configuration).</p>
+</blockquote>
 <p><strong>Title (Regexp)</strong>
 : The title of the programme to look for. Note that this accepts
 case-insensitive regular expressions, so you can use pattern matching as

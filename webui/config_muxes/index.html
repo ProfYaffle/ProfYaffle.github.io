@@ -203,7 +203,7 @@
             
                 <li class="toctree-l3"><a href="#configuration-dvb-inputs-muxes">Configuration - DVB Inputs - Muxes</a></li>
                 
-                    <li><a class="toctree-l4" href="#buttons">Buttons</a></li>
+                    <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
                     <li><a class="toctree-l4" href="#columns">Columns</a></li>
                 
@@ -421,18 +421,52 @@ also uses the term ‘mux’ to describe a source for multiple IP streams -
 so an IP address, in effect.</p>
 <p><img alt="'Muxes' Tab Screenshot" src="../docresources/configdvbmux.png" /></p>
 <hr />
-<h4 id="buttons">Buttons</h4>
-<p>The buttons have the following functions:</p>
+<h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
+<p>The following functions are available:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Save</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Undo</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Add</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Edit</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Hide</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h4 id="columns">Columns</h4>
 <p>The columns have the following functions:</p>
-<p><strong>Play</strong>:
-Downloads a playlist file (M3U or XSPF, depending on your startup
-options) so you can tune to the mux from an external application.</p>
+<p><strong>Play</strong>
+: Downloads a playlist file (M3U or XSPF, depending on your startup
+  options) so you can tune to the mux from an external application.</p>
 <p><strong>Enabled</strong>:
-Whether or not the mux is enabled and thus available.</p>
+  Whether or not the mux is enabled and thus available.</p>
 <p><strong>EPG</strong>:
-EPG scan setup</p>
+  EPG scan setup</p>
 <ul>
 <li>
 <p><strong>Disable</strong>:
@@ -483,25 +517,25 @@ configuration file)</p>
 configuration file)</p>
 </li>
 </ul>
-<p><strong>Network</strong>:
-The name of the network to which the mux belongs. Networks are defined
-in Configuration -> DVB Inputs -> Networks - DVB-S or ATSC, for
-example.</p>
-<p><strong>Original Network ID</strong>:
-The ONID is a code which uniquely identifies a network.</p>
-<p><strong>Transport Stream ID</strong>:
-The TSID is a code which identifies the network origination source or
-transmitter.</p>
-<p><strong>CRID Authority</strong>:
-The group responsible for the Content Reference Identifier for this mux. This is effectively a URL/URI to an authoritative source for programme
-data (e.g. series link).</p>
-<p><strong>Scan Status</strong>:
-Whether the mux is being scanned (ACTIVE), is planned to be scanned
-(PEND) or has reverted to idle scan (IDLE).</p>
-<p><strong>Scan Result</strong>:
-Whether there were any problems with the last scan of this mux.</p>
-<p><strong>URL</strong>:
-Mux URL.</p>
+<p><strong>Network</strong>
+: The name of the network to which the mux belongs. Networks are defined
+  in <em>Configuration -&gt; DVB Inputs -&gt; Networks</em> - DVB-S or ATSC, for
+  example.</p>
+<p><strong>Original Network ID</strong>
+: The ONID is a code which uniquely identifies a network.</p>
+<p><strong>Transport Stream ID</strong>
+: The TSID is a code which identifies the network origination source or
+  transmitter.</p>
+<p><strong>CRID Authority</strong>
+: The group responsible for the Content Reference Identifier for this mux. This is effectively a URL/URI to an authoritative source for programme
+  data (e.g. series link).</p>
+<p><strong>Scan Status</strong>
+: Whether the mux is being scanned (ACTIVE), is planned to be scanned
+  (PEND) or has reverted to idle scan (IDLE).</p>
+<p><strong>Scan Result</strong>
+: Whether there were any problems with the last scan of this mux.</p>
+<p><strong>URL</strong>
+: Mux URL.</p>
 <ul>
 <li>
 <p><strong>udp://</strong>:
@@ -522,39 +556,40 @@ Mux URL.</p>
 <li>
 <p><strong>pipe://</strong>:
   Read standard output from an external program. If the program name does
-not have the first character ‘/’, the PATH environment variable is used
-to find the program name in all directories specified by PATH.
-Additional arguments may be separated using spaces. A raw MPEG-TS stream
-is expected. The string \${service_name} is substituted with the
-service name field contents. The \ (backslash) character means “take
-the next character as-is” (usually space or the backslash itself.</p>
+  not have a forward slash (<code>/</code>) as the first character, the PATH environment
+  variable is used to find the program name in all directories specified by
+  PATH. Additional arguments may be separated using spaces. A raw MPEG-TS 
+  stream is expected. The string <code>${service\_name}</code> is substituted with the
+  service name field contents. The backslash character (<code>\</code>) means “take
+  the next character as-is” (usually space or the backslash itself - what&rsquo;s 
+  termed &ldquo;escaping&rdquo; a character).</p>
 </li>
 </ul>
-<p><strong># Services</strong>:
-The number of services found on this mux.</p>
-<p><strong>Character Set</strong>:
-The character encoding for this mux (e.g. UTF-8).</p>
-<p><strong>PMT Descriptor 0x06 = AC-3</strong>:
-Whether or not the empty PMT descriptor 0x06 defaults to the AC-3
-stream. Some Chinese cable providers are using this. If unsure, keep
-this off.</p>
-<p><strong>Interface</strong>:
-IPTV : the network interface/card on which the IPTV source can be found.</p>
-<p><strong>ATSC</strong>:
-whether or not this is an ATSC IPTV source.</p>
-<p><strong>Priority</strong>:
-IPTV : The mux priority value (higher value = higher priority to use
-services from this mux). Value 0 means use the IPTV network priority
-value.</p>
-<p><strong>Streaming Priority</strong>:
-IPTV : The mux priority value for streamed channels through HTTP or HTSP
-(higher value = higher priority to use services from this mux). Value 0
-means use the standard streaming network priority value.</p>
-<p><strong>Environment (pipe)</strong>:
-IPTV : List of environment variables for pipe (like PATH=/bin:/sbin)
-separated by spaces. The backslash character is handled like in URL.</p>
-<p><strong>Respawn (pipe)</strong>:
-IPTV : Respawn the executed process when it dies.</p>
+<p><strong># Services</strong>
+: The number of services found on this mux.</p>
+<p><strong>Character Set</strong>
+: The character encoding for this mux (e.g. UTF-8).</p>
+<p><strong>PMT Descriptor 0x06 = AC-3</strong>
+: Whether or not the empty PMT descriptor 0x06 defaults to the AC-3
+  stream. Some Chinese cable providers are using this. If unsure, keep
+  this off.</p>
+<p><strong>Interface</strong>
+: IPTV : the network interface/card on which the IPTV source can be found.</p>
+<p><strong>ATSC</strong>
+: Whether or not this is an ATSC IPTV source.</p>
+<p><strong>Priority</strong>
+: IPTV : The mux priority value (higher value = higher priority to use
+  services from this mux). Value 0 means use the IPTV network priority
+  value.</p>
+<p><strong>Streaming Priority</strong>
+: IPTV : The mux priority value for streamed channels through HTTP or HTSP
+  (higher value = higher priority to use services from this mux). Value 0
+  means use the standard streaming network priority value.</p>
+<p><strong>Environment (pipe)</strong>
+: IPTV : List of environment variables for pipe (like PATH=/bin:/sbin)
+  separated by spaces. The backslash character is handled like in URL.</p>
+<p><strong>Respawn (pipe)</strong>
+: IPTV : Respawn the executed process when it dies.</p>
               
             </div>
           </div>

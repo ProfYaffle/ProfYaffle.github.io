@@ -253,6 +253,12 @@
             
                 <li class="toctree-l3"><a href="#configuration-channelepg-epg-grabber">Configuration - Channel/EPG - EPG Grabber</a></li>
                 
+                    <li><a class="toctree-l4" href="#screenshot-here">SCREENSHOT HERE</a></li>
+                
+                    <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
+                
+                    <li><a class="toctree-l4" href="#columns">Columns</a></li>
+                
                     <li><a class="toctree-l4" href="#grabber-types">Grabber Types</a></li>
                 
                     <li><a class="toctree-l4" href="#grabber-modules">Grabber Modules</a></li>
@@ -432,6 +438,33 @@
 grabbing capabilities. Tvheadend supports a variety of different EPG
 grabbing mechanisms. These fall into 3 broad categories, within which
 there are a variety of specific grabber implementations.</p>
+<h4 id="screenshot-here">SCREENSHOT HERE</h4>
+<h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
+<p>The following functions are available:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Button</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Button</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Button</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="columns">Columns</h4>
 <h4 id="grabber-types">Grabber Types</h4>
 <ul>
 <li>
@@ -508,65 +541,77 @@ there are a variety of specific grabber implementations.</p>
        # └───────────────────────── min (0 - 59)
 </code></pre>
 <p>With the following cron special characters&hellip;</p>
-<h5 id="asterisk-42">Asterisk ( * )</h5>
-<p>The asterisk indicates that the cron expression matches for all
-values of the field. E.g., using an asterisk in the 4th field
-(month) indicates every month.</p>
-<h5 id="slash">Slash ( / )</h5>
-<p>Slashes describe increments of ranges. For example 3-59/15 in the
-1st field (minutes) indicate the third minute of the hour and every
-15 minutes thereafter. The form “*/…” is equivalent to the form
-“first-last/…”, that is, an increment over the largest possible
-range of the field.</p>
-<h5 id="comma">Comma ( , )</h5>
-<p>Commas are used to separate items of a list. For example, using
-“MON,WED,FRI” in the 5th field (day of week) means Mondays,
-Wednesdays and Fridays.</p>
-<h5 id="hyphen-">Hyphen ( - )</h5>
-<p>Hyphens define ranges. For example, 2000-2010 indicates every year
-between 2000 and 2010 AD, inclusive.</p>
-<h5 id="number-sign-35">Number-sign ( # )</h5>
-<p>Number-sign defines a start of a comment. The rest of line is
-ignored behind this character.</p>
+<ul>
+<li>
+<p><strong>Asterisk (<code>*</code>)</strong>
+: The asterisk indicates that the cron expression matches for all
+  values of the field. E.g., using an asterisk in the 4th field
+  (month) indicates every month.</p>
+</li>
+<li>
+<p><strong>Slash (<code>/</code>)</strong>
+: Slashes describe increments of ranges. For example 3-59/15 in the
+  1st field (minutes) indicate the third minute of the hour and every
+  15 minutes thereafter. The form “*…” is equivalent to the form
+  “first-last…”, that is, an increment over the largest possible
+  range of the field.</p>
+</li>
+<li>
+<p><strong>Comma (<code>,</code>)</strong>
+  Commas are used to separate items of a list. For example, using
+  “MON,WED,FRI” in the 5th field (day of week) means Mondays,
+  Wednesdays and Fridays.</p>
+</li>
+<li>
+<p><strong>Hyphen (<code>-</code>)</strong>
+: Hyphens define ranges. For example, 2000-2010 indicates every year
+  between 2000 and 2010 AD, inclusive.</p>
+</li>
+<li>
+<p><strong>Number-sign (<code>#</code>)</strong>
+: Number-sign defines a start of a comment. The rest of line is
+  ignored behind this character.</p>
+</li>
+</ul>
 <hr />
 <h4 id="configuration-options">Configuration Options</h4>
 <h4 id="general-config">General Config</h4>
 <p><strong>Update channel name</strong>
-:   Automatically update channel names using information provided by the
-    enabled EPG providers.</p>
+: Automatically update channel names using information provided by the
+  enabled EPG providers.</p>
 <p><strong>Update channel number</strong>
-:   Automatically update channel numbers using information provided by the
-    enabled EPG providers.</p>
+: Automatically update channel numbers using information provided by the
+  enabled EPG providers.</p>
 <p><strong>Update channel icon</strong>
-:   Automatically update channel icons using information provided by the
-    enabled EPG providers.</p>
+: Automatically update channel icons using information provided by the
+  enabled EPG providers.</p>
 <p><strong>Periodic save EPG to disk Interval</strong>
-:   Writes the current in-memory EPG database to disk every x Hours (user
-    defined), so should a crash/unexpected shutdown occur EPG data is saved
-    periodically to the database (Re-read on next startup) Set to 0 to
-    disable.</p>
+: Writes the current in-memory EPG database to disk every x Hours (user
+  defined), so should a crash/unexpected shutdown occur EPG data is saved
+  periodically to the database (Re-read on next startup). Set to 0 to
+  disable.</p>
 <h4 id="internal-grabber">Internal Grabber</h4>
 <p><strong>Module</strong>
-:   Select which internal grabber to use.</p>
+: Select which internal grabber to use.</p>
 <p><strong>Cron multi-line</strong>
-:   Multiple lines of the cron time specification.</p>
+: Multiple lines of the cron time specification.</p>
 <h4 id="over-the-air-grabbers">Over-the-air Grabbers</h4>
 <p><strong>Force initial EPG scan at startup</strong>
-:   … no comment</p>
+: … no comment</p>
 <p><strong>Cron multi-line</strong>
-:   Multiple lines of the cron time specification.</p>
+: Multiple lines of the cron time specification.</p>
 <p><strong>EPG scan timeout in seconds</strong>
-:   The multiplex (mux) is tuned for this amount of time at maximum. If EPG
-    data are completed before this limit, the mux is released sooner.</p>
+: The multiplex (mux) is tuned for this amount of time at maximum. If EPG
+  data are completed before this limit, the mux is released sooner.</p>
 <p><strong>Checkbox list</strong>
-:   Checkbox list to enable/disable available modules. By default all
-    grabbers should be enabled.</p>
+: Checkbox list to enable/disable available modules. By default all
+  grabbers should be enabled.</p>
 <h4 id="external-interfaces">External interfaces</h4>
 <p>Checkbox list to enable/disable available modules. The path field
 contains the absolute path of the unix domain socket into which EPG data
 can be sent.</p>
-<p>To send data to the socket use the command “netcat -u SOCKET_PATH”.\
- Note: for some systems the netcat flags can vary so please consult the
+<p>To send data to the socket use the command <code>netcat -u SOCKET_PATH</code>.</p>
+<p>Note: for some systems the netcat flags can vary so please consult the
 man page.</p>
 <h4 id="notes">Notes</h4>
 <p>To apply any changes please use the [Save configuration button]</p>

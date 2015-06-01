@@ -438,16 +438,20 @@ Tvheadend interface so you know where to look.</p>
 <p><em>tvheadend web interface: <em>Configuration -&gt; DVB Inputs -&gt; Networks</em></em></p>
 <p>Create a network of the appropriate type here. You can have multiple networks of the same type as necessary, e.g. to have two DVB-T networks defined, one with HD muxes, one without.</p>
 <p>The creation process allows you to select from a series of pre-defined mux lists for common DVB sources. These are maintained outside of tvheadend, and are downloaded from linuxtv - but they do go out of date as broadcasters move services around and national authorities change entire pieces of spectrum. As such, you should try the pre-defined values, but you may need to add muxes manually.</p>
-<blockquote>
-<p>Critical configuration items at this stage: &lt;........&gt;</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Critical Configuration Items</p>
+<p>Critical configuration items at this stage: <........></p>
+</div>
+
 <h4 id="3-associate-the-network-with-the-respective-tuners">3. Associate the network with the respective tuner(s)</h4>
 <p><em>tvheadend web interface: <em>Configuration -&gt; DVB Inputs -&gt; TV Adapters</em></em></p>
 <p>Associate each of your tuners with the correct network through <em>Parameters -&gt; Basic Settings</em>. </p>
 <p>This can be as simple or as complex as necessary. You may simply have, for example, a single DVB-S2 network defined and then associate this with all DVB-S2 tuners. Or, you might have multiple networks defined - different satellites, different encoding. So, as further examples, you might define and then associate an HD DVB-T2 (e.g. H.264) network with HD tuners, while having a separate SD network associated with an independent SD (e.g. MPEG-2) tuner. </p>
-<blockquote>
-<p>Critical configuration items at this stage: &lt;........&gt;</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Critical Configuration Items</p>
+<p>Critical configuration items at this stage: <........></p>
+</div>
+
 <p>At this point, your tuners now know what networks to use: one network can appear on multiple tuners (many-to-one), and one tuner can have multiple networks.</p>
 <h4 id="4-if-necessary-manually-add-muxes-to-the-network">4. If necessary, manually add muxes to the network</h4>
 <p><em>tvheadend web interface: <em>Configuration -&gt; DVB Inputs -&gt; Muxes</em></em></p>
@@ -469,9 +473,11 @@ Tvheadend interface so you know where to look.</p>
 <p>other major sources....?</p>
 </blockquote>
 <p>You can also use <a href="http://www.linuxtv.org/wiki/index.php/Dvbscan">dvbscan</a> to force a scan and effectively ask your tuner what it can see.</p>
-<blockquote>
-<p>Critical configuration items at this stage: &lt;........&gt;</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Critical Configuration Items</p>
+<p>Critical configuration items at this stage: <........></p>
+</div>
+
 <h4 id="5-scan-for-services">5. Scan for services</h4>
 <p><em>tvheadend web interface: <em>Configuration -&gt; DVB Inputs -&gt; Services</em></em></p>
 <p>This is where the services will appear as your tuners tune to the muxes based on the network you told them to look on. Again, remember what&rsquo;s happening: the tvheadend software is telling your tuner hardware (via the drivers) to sequentially tune to each mux it knows about, and then see what &lsquo;programmes&rsquo; it can see on that mux, each of which is identified by a series of unique identifiers that describe the audio stream(s), the video stream(s), the subtitle stream(s) and language(s), and so on.</p>

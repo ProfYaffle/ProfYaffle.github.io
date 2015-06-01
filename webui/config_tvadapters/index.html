@@ -189,6 +189,8 @@
             
                 <li class="toctree-l3"><a href="#configuration-dvb-inputs-tv-adapters">Configuration - DVB Inputs - TV Adapters</a></li>
                 
+                    <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
+                
                     <li><a class="toctree-l4" href="#basic-settings">Basic Settings</a></li>
                 
                     <li><a class="toctree-l4" href="#advanced-settings">Advanced Settings</a></li>
@@ -197,7 +199,7 @@
                 
                     <li><a class="toctree-l4" href="#linuxdvb-satellite-config-rows">LinuxDVB Satellite Config Rows</a></li>
                 
-                    <li><a class="toctree-l4" href="#sat62ip-specific-rows">SAT>IP Specific Rows</a></li>
+                    <li><a class="toctree-l4" href="#satip-specific-rows">SATIP Specific Rows</a></li>
                 
             
             </ul>
@@ -426,148 +428,172 @@ Tvheadend press the ‘Save’ button. In order to change a Checkbox
 cell you only have to click once in it.</p>
 <p><img alt="'TV Adapters' Tab Screenshot" src="../docresources/configtvadapters.png" /></p>
 <hr />
+<h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
+<p>The following functions are available:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Save</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Help</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h4 id="basic-settings">Basic Settings</h4>
 <p><strong>Enabled</strong>
-:   If selected, this tuner/adapter will be enabled and will become
-    available to receive broadcasts or programmes.</p>
+: If selected, this tuner/adapter will be enabled and will become
+  available to receive broadcasts or programmes.</p>
 <p><strong>Name</strong>:
-:   The name of this tuner.</p>
+: The name of this tuner.</p>
 <p><strong>Over-the-Air EPG</strong>
-:   Enable over-the-air programme guide (EPG) scanning on this input
-    device.</p>
+: Enable over-the-air programme guide (EPG) scanning on this input
+  device.</p>
 <p><strong>Networks</strong>
-:   Associate this device with one or more networks.</p>
+: Associate this device with one or more networks.</p>
 <hr />
 <h4 id="advanced-settings">Advanced Settings</h4>
 <p><strong>Priority</strong>
-:   The tuner priority value (higher value = higher priority to use this
-    tuner).</p>
+: The tuner priority value (higher value = higher priority to use this
+  tuner).</p>
 <p><strong>Streaming Priority</strong>
-:   The tuner priority value for streamed channels through HTTP or HTSP
-    (higher value = higher priority to use this tuner). If not set
-    (zero), the standard priority value is used.</p>
+: The tuner priority value for streamed channels through HTTP or HTSP
+  (higher value = higher priority to use this tuner). If not set
+  (zero), the standard priority value is used.</p>
 <p><strong>Init Scan</strong>
-:   Allow the initial scan tuning on this device (scan when Tvheadend
-    starts). See to Skip initial Scan in the network settings for the
-    further description.</p>
+: Allow the initial scan tuning on this device (scan when Tvheadend
+  starts). See to Skip initial Scan in the network settings for the
+  further description.</p>
 <p><strong>Idle Scan</strong>
-:   Allow the idle scan tuning on this device.</p>
+: Allow the idle scan tuning on this device.</p>
 <p><strong>Linked Input</strong>
-:   Always make alive also the linked input. The subscriptions are named
-    as “keep”.</p>
+: Always make alive also the linked input. The subscriptions are named
+  as “keep”.</p>
 <hr />
 <h4 id="linuxdvb-specific-rows">LinuxDVB Specific Rows</h4>
 <p><strong>Power Save</strong>
-:   If enabled, allows the tuner to go to sleep when idle.</p>
+: If enabled, allows the tuner to go to sleep when idle.</p>
 <p><strong>Tune Before DiseqC</strong>
-:   If set, one tune request (setup) is proceed before the DiseqC
-    sequence (voltage, tone settings). Some linux drivers require this
-    procedure.</p>
+: If set, one tune request (setup) is proceed before the DiseqC
+  sequence (voltage, tone settings). Some linux drivers require this
+  procedure.</p>
 <p><strong>Tune Repeats</strong>
-:   If set, the tune requests are repeated using this number. Zero means
-    one tune requests, one two tune requests etc.</p>
+: If set, the tune requests are repeated using this number. Zero means
+  one tune requests, one two tune requests etc.</p>
 <p><strong>Skip Initial Bytes</strong>
-:   If set, first bytes from the MPEG-TS stream are discarded. It may be
-    required for some drivers / hardware which does not flush completely
-    the MPEG-TS buffers after a frequency/parameters change.</p>
+: If set, first bytes from the MPEG-TS stream are discarded. It may be
+  required for some drivers / hardware which does not flush completely
+  the MPEG-TS buffers after a frequency/parameters change.</p>
 <p><strong>Input Buffer (Bytes)</strong>
-:   By default, linuxdvb input buffer is 18800 bytes long. The accepted
-    range is 18800-1880000 bytes.</p>
+: By default, linuxdvb input buffer is 18800 bytes long. The accepted
+  range is 18800-1880000 bytes.</p>
 <p><strong>Status Period</strong>
-:   By default, linuxdvb status read period is 1000ms (one second). The
-    accepted range is 250ms to 8000ms. Note that for some hardware /
-    drivers (like USB), the status operations takes too much time and
-    CPU. In this case, increase the default value. For fast hardware,
-    this value might be descreased to make the decision of the re-tune
-    algorithm based on the signal status faster.</p>
+: By default, linuxdvb status read period is 1000ms (one second). The
+  accepted range is 250ms to 8000ms. Note that for some hardware /
+  drivers (like USB), the status operations takes too much time and
+  CPU. In this case, increase the default value. For fast hardware,
+  this value might be descreased to make the decision of the re-tune
+  algorithm based on the signal status faster.</p>
 <p><strong>Force old status</strong>
-:   Always use the old ioctls to read the linuxdvb status (signal
-    strenght, SNR, error counters). Some drivers are not matured enough
-    to provide the correct values using the new v5 linuxdvb API.</p>
+: Always use the old ioctls to read the linuxdvb status (signal
+  strength, SNR, error counters). Some drivers are not matured enough
+  to provide the correct values using the new v5 linuxdvb API.</p>
 <hr />
 <h4 id="linuxdvb-satellite-config-rows">LinuxDVB Satellite Config Rows</h4>
 <p><strong>DiseqC repeats</strong>
-:   Number of repeats for the DiseqC commands (default is zero - no
-    DiseqC repeats).</p>
+: Number of repeats for the DiseqC commands (default is zero - no
+  DiseqC repeats).</p>
 <p><strong>Full DiseqC</strong>
-:   Always sent the whole DiseqC sequence including LNB setup (voltage,
-    tone). If this is not checked, only changed settings is set. It may
-    cause issues with some drivers. If the tuning is not reliable, try
-    to activate this option.</p>
+: Always sent the whole DiseqC sequence including LNB setup (voltage,
+  tone). If this is not checked, only changed settings is set. It may
+  cause issues with some drivers. If the tuning is not reliable, try
+  to activate this option.</p>
 <p><strong>Turn off LNB when idle</strong>
-:   Turn off LNB when it is not used. It may save some power.</p>
+: Turn off LNB when it is not used. It may save some power.</p>
 <p><strong>Switch Then Rotor</strong>
-:   If the DiseqC switch is before rotor (tuner - switch - rotor),
-    enable this.</p>
+: If the DiseqC switch is before rotor (tuner - switch - rotor),
+  enable this.</p>
 <p><strong>Init Rotor Time (seconds)</strong>
-:   Upon new start, tvheadend does not know the last rotor position.
-    This value defined the initial rotor movement. TVHeadend waits the
-    specified seconds when the first movement is requested.</p>
+: Upon new start, tvheadend does not know the last rotor position.
+  This value defined the initial rotor movement. TVHeadend waits the
+  specified seconds when the first movement is requested.</p>
 <p><strong>Min Rotor Time (seconds)</strong>
-:   The minimum delay after the rotor movement command is send.</p>
+: The minimum delay after the rotor movement command is send.</p>
 <hr />
-<h4 id="sat62ip-specific-rows">SAT>IP Specific Rows</h4>
+<h4 id="satip-specific-rows">SAT&gt;IP Specific Rows</h4>
 <p><strong>Full Mux Rx mode supported</strong>
-:   Enable if the SAT>IP box supports the full mux rx mode (pids=all)\
-     note: no comma after ‘Enable’</p>
+: Enable if the SAT&gt;IP box supports the full mux rx mode (<code>pids=all</code>)</p>
 <p><strong>Signal scale (240 or 100)</strong>
-:   Some SAT>IP boxes only report a 0-100 (percentage) signal strength.
-    If your signal strength reports as too low, try setting this to 100.</p>
+: Some SAT&gt;IP boxes only report a 0-100 (percentage) signal strength.
+  If your signal strength reports as too low, try setting this to 100.</p>
 <p><strong>Maximum PIDs</strong>
-:   Maximum supported PIDs in the filter of the SAT>IP box.</p>
+: Maximum supported PIDs in the filter of the SAT&gt;IP box.</p>
 <p><strong>Maximum length of PIDs</strong>
-:   Maximum length in characters for the command setting PIDs to the
-    SAT>IP box.</p>
+: Maximum length in characters for the command setting PIDs to the
+  SAT&gt;IP box.</p>
 <p><strong>Addpids/delpids supported</strong>
-:   Enable if the SAT>IP box supports the addpids/delpids command.</p>
+: Enable if the SAT&gt;IP box supports the <code>addpids</code>/<code>delpids</code> commands.</p>
 <p><strong>PIDs in setup</strong>
-:   Enable, if the SAT>IP box requires pids=0 parameter in the SETUP
-    RTSP command.</p>
+: Enable if the SAT&gt;IP box requires <code>pids=0</code> parameter in the SETUP
+  RTSP command.</p>
 <p><strong>Double RTSP Shutdown</strong>
-:   Enable, if the SAT>IP box might require to send twice the RTSP
-    SHUTDOWN command.</p>
+: Enable if the SAT&gt;IP box might require to send twice the RTSP
+  SHUTDOWN command.</p>
 <p><strong>Force pilot for DVB-S2</strong>
-:   Enable, if the SAT>IP box requiest plts=on parameter in the SETUP
-    RTSP command for DVB-S2 muxes.</p>
+: Enable if the SAT&gt;IP box requiest plts=on parameter in the SETUP
+  RTSP command for DVB-S2 muxes.</p>
 <p><strong>UDP RTP Port Number (2 ports)</strong>
-:   Force the local UDP Port number here. The number should be even (RTP
-    port). The next odd number (+1) will be used as the RTCP port.</p>
+: Force the local UDP Port number here. The number should be even (RTP
+  port). The next odd number (+1) will be used as the RTCP port.</p>
 <p><strong>Satellite Positions</strong>
-:   Select the number of satellite positions supported by the SAT>IP
-    hardware and your coaxial cable wiring.</p>
+: Select the number of satellite positions supported by the SAT&gt;IP
+  hardware and your coaxial cable wiring.</p>
 <p><strong>Master Tuner</strong>
-:   Select the master tuner.</p>
+: Select the master tuner.</p>
+<blockquote>
 <p>The signal from the standard universal LNB can be split using a
-    simple coaxial splitter (no multiswitch) to several outputs. In this
-    case, the position, the polarization and low-high band settings must
-    be equal. </p>
+simple coaxial splitter (no multiswitch) to several outputs. In this
+case, the position, the polarization and low-high band settings must
+be equal. </p>
 <p>If you set other tuner as master, then this tuner will act like a
-    slave one and tvheadend will assure that this tuner will not use
-    incompatible parameters (position, polarization, lo-hi).</p>
+slave one and tvheadend will assure that this tuner will not use
+incompatible parameters (position, polarization, lo-hi).</p>
+</blockquote>
 <p><strong>Next tune delay in ms (0-2000)</strong>
-:   The delay before tuning in milliseconds after tuner stop. If the
-    time after previous start and next start is greater than this
-    value - the delay is not applied.</p>
+: The delay before tuning in milliseconds after tuner stop. If the
+  time after previous start and next start is greater than this
+  value - the delay is not applied.</p>
 <p><strong>Send full PLAY cmd</strong>
-:   Send the full RTSP PLAY command after full RTSP SETUP command. Some
-    device firmwares require this to get MPEG-TS stream.</p>
+: Send the full RTSP PLAY command after full RTSP SETUP command. Some
+  device firmwares require this to get MPEG-TS stream.</p>
 <p><strong>Override tuner count</strong>
-:   Force tvheadend to see a specific number of tuners.</p>
+: Force tvheadend to see a specific number of tuners.</p>
+<blockquote>
 <p>Some devices, notably AVM’s FRITZ!Box Cable 6490, report wrong number of tuners
-    and this setting allows you to override that. Any value below 1 or
-    above 32 is ignored. For now this setting requires a restart of
-    tvheadend.</p>
+and this setting allows you to override that. Any value below 1 or
+above 32 is ignored. For now this setting requires a restart of
+tvheadend.</p>
+</blockquote>
 <p><strong>PIDs 21 in setup</strong>
-:   Enable, if the SAT>IP box requires pids=21 parameter in the SETUP
-    RTSP command.</p>
+: Enable if the SAT&gt;IP box requires <code>pids=21</code> parameter in the SETUP
+  RTSP command.</p>
 <p><strong>Force teardown delay</strong>
-:   Force the delay between RTSP TEARDOWN and RTSP SETUP command (value
-    from ‘Next tune delay in ms’ is used). Some devices are not able to
-    handle quick continuous tuning.</p>
+: Force the delay between RTSP TEARDOWN and RTSP SETUP command (value
+  from ‘Next tune delay in ms’ is used). Some devices are not able to
+  handle quick continuous tuning.</p>
 <p><strong>Tuner bind IP address</strong>
-:   Force all network connections to this tuner to be made over the
-    specified IP-address, similar to the setting for the SAT-IP - device
-    itself. Setting this overrides the device - specific setting.</p>
+: Force all network connections to this tuner to be made over the
+  specified IP address, similar to the setting for the SAT&gt;IP device
+  itself. Setting this overrides the device-specific setting.</p>
               
             </div>
           </div>
