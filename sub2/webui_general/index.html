@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>General - Tvheadend 4.0</title>
+  
+
+  <link rel="shortcut icon" href="../images/favicon.png">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../custom.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "General";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Tvheadend 4.0</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../todo/">To-do</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../overview/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../before_you_begin/">Before you begin - some basic concepts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install_tuner_hardware/">Install your tuner hardware</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install_tvheadend/">Install Tvheadend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../configure_tvheadend/">Configure Tvheadend</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Web Interface Guide</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">General</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#general-overview-of-web-interface">General Overview of Web Interface</a></li>
+                
+                    <li><a class="toctree-l4" href="#page-structure">Page Structure</a></li>
+                
+                    <li><a class="toctree-l4" href="#displaying-and-manipulating-columns">Displaying and Manipulating Columns</a></li>
+                
+                    <li><a class="toctree-l4" href="#editing-fields">Editing Fields</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/epg/">Electronic Program Guide Tab</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Digital Video Recorder Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/dvr_upcoming/">Upcoming/Current Recordings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/dvr_finished/">Finished Recordings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/dvr_failed/">Failed Recordings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/dvr_autorec/">DVR AutoRec Entries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/dvr_timerec/">Time Schedules</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Configuration Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_general/">General</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_access/">Access Entries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_passwords/">Passwords</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>DVB Inputs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_tvadapters/">TV Adapters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_networks/">Networks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_muxes/">Muxes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_services/">Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_muxsched/">Mux Schedulers</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Channel/EPG</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_channels/">Channel</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_tags/">Channel Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_bouquet/">Bouquets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_epggrab/">EPG Grabber</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Stream</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_streamprofile/">Stream Profiles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_esfilter/">(Various) Stream Filters</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Recording</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_dvr/">Digital Video Recorder Profiles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_timeshift/">Timeshift</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_caclient/">CAs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/config_debugging/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_servicemapper/">Service Mapper</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/about/">About Tab</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Appendices</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Appendices/faqs/">Appendix 1 - Frequently-asked Questions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Appendices/command_line_options/">Appendix 2 - Command-line Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Appendices/debugging/">Appendix 3 - Debugging Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Appendices/doc_update/">Appendix 4 - Updating this documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Appendices/markdown_cribsheet/">Appendix 5 - Markdown Cribsheet</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about_project/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Tvheadend 4.0</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Web Interface Guide &raquo;</li>
+        
+      
+    
+    <li>General</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/tvheadend/tvheadend-documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="general-overview-of-web-interface"><a class="toclink" href="#general-overview-of-web-interface">General Overview of Web Interface</a><a class="headerlink" href="#general-overview-of-web-interface" title="Permanent link"></a></h2>
+<p>Tvheadend is operated primarily through a tabbed web interface. </p>
+<p>There are some basic navigation concepts that will help you get around and
+make the best of it.</p>
+<h4 id="page-structure"><a class="toclink" href="#page-structure">Page Structure</a><a class="headerlink" href="#page-structure" title="Permanent link"></a></h4>
+<p>The interface is made up of nested tabs, so similar functions are grouped
+together (e.g. all configuration items at the top level, then all configuration
+items for a particular topic are below that).</p>
+<p>Each tab is then typically laid out with a menu bar across the top that
+provides access to Add/Save/Edit-type functions, and a grid like a spreadsheet
+below that. The grid items are frequently editable.</p>
+<p>Most configuration items - certainly the ones that are common to all types
+of item covered by that tab - are in this grid. However, some item-specific
+configuraiton items are then only available through the <em>Add</em> and <em>Edit</em>
+dialog boxes. For example, the main network configuration tab grid covers
+parameters common to DVB-S, -T, -C and IPTV networks, but specific things
+such as FEC rolloff or mux URL are then only in the dialogs for networks
+that need these values.</p>
+<h4 id="displaying-and-manipulating-columns"><a class="toclink" href="#displaying-and-manipulating-columns">Displaying and Manipulating Columns</a><a class="headerlink" href="#displaying-and-manipulating-columns" title="Permanent link"></a></h4>
+<ul>
+<li>
+<p>Not all columns are necessarily visible. If you hover your mouse over a
+  column heading, you&rsquo;ll see a down arrow - click here, and a drop-down menu
+  will appear to give you access to <strong>which columns are shown and which are not</strong>.</p>
+</li>
+<li>
+<p>The same drop-down menu gives you access to a <strong>sort</strong> function if defined
+  (it doesn&rsquo;t always make sense to have a sortable column for some parameters).
+  You can also sort a column by simply clicking on the column header; reverse
+  the sort order by clicking again.</p>
+</li>
+<li>
+<p>And the same drop-down menu also gives you access to a <strong>filter</strong> function
+  if defined. The filter does simple pattern-matching on any string you
+  provide.</p>
+</li>
+<li>
+<p><strong>Re-arrange</strong> the columns by simply dragging he header to a new spot.</p>
+</li>
+<li>
+<p><strong>Re-size</strong> the columns by dragging the very edges of the column header as
+  required. </p>
+</li>
+</ul>
+<h4 id="editing-fields"><a class="toclink" href="#editing-fields">Editing Fields</a><a class="headerlink" href="#editing-fields" title="Permanent link"></a></h4>
+<ul>
+<li>
+<p>To edit a cell, double click on it. After a cell is changed, a small red
+  flag or triangle will appear in the top-left corner to indicate that it
+  has been changed. These changes can now be kept (<em>Save</em> button), or
+  abandoned (<em>Undo</em> button).</p>
+</li>
+<li>
+<p>To change a checkbox or radio button, click once.</p>
+</li>
+<li>
+<p>To add a new entry, press the <em>Add</em> button. The new (empty) entry will
+  be created on the server but will not be saved and will not necessarily
+  be enabled. You can now change all the cells to the desired values, check
+  the ‘enable’ box if applicable and then press <em>Save</em> to activate the new
+  entry.</p>
+</li>
+<li>
+<p>Most rows are multi-selectable, so you can carry out certain actions on
+  more than one entry at the same time. So, for example, you can select
+  multiple items by using <keyboard>Ctrl+click</keyboard> on each
+  entry or <keyboard>Click, Shift+click</keyboard> to select a range.</p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../webui/epg/" class="btn btn-neutral float-right" title="Electronic Program Guide Tab"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../configure_tvheadend/" class="btn btn-neutral" title="Configure Tvheadend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>(c) 2006 - 2015 Tvheadend Foundation CIC</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../configure_tvheadend/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../webui/epg/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
